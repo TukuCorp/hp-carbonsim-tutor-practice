@@ -40,7 +40,7 @@ table.plain{border-collapse:collapse;width:100%;font-size:14px;background:#fff}t
 table.plain.tight td,table.plain.tight th{padding:3px 8px}table.plain tr.won td{background:#e2f2ea}table.plain tr.lost td{color:#7b8b98}table.plain tr.you td{font-weight:700;box-shadow:inset 0 0 0 2px var(--ink)}
 /* desk */
 .filters,.post-tabs{display:flex;gap:6px;flex-wrap:wrap;align-items:center;margin-bottom:14px}.fbtn{background:#fff;border:1px solid #93a7b6;border-radius:3px;padding:4px 10px;font-size:14px}.fbtn.on{background:var(--ink);color:#fff;border-color:var(--ink)}#tkscore{margin-left:auto}
-.ticket{max-width:720px}.bubble{background:#fff;border:1px solid var(--line);border-radius:10px 10px 10px 0;padding:14px 18px;font-size:16px}.bubble{font-size:19px;font-weight:600}.opts{display:grid;gap:7px;margin:12px 0}.opt{text-align:left;background:#fff;border:1px solid #93a7b6;border-radius:4px;padding:10px 12px}.opt:hover:enabled{background:#f6f3c8}.opt.right{background:#dcefe5;border-color:var(--green);font-weight:600}.opt.wrong{background:#f9e3df;border-color:var(--red)}.opt.dim{opacity:.6}
+.ticket{max-width:720px}.bubble{background:#fff;border:1px solid var(--line);border-radius:10px 10px 10px 0;padding:14px 18px;font-size:16px}.bubble{font-size:19px;font-weight:600}.opts{display:grid;gap:7px;margin:12px 0}.opt{text-align:left;background:#fff;border:1px solid #93a7b6;border-radius:4px;padding:10px 12px}@media (hover:hover){.opt:hover:enabled{background:#f6f3c8}}.opt.right{background:#dcefe5;border-color:var(--green);font-weight:600}.opt.wrong{background:#f9e3df;border-color:var(--red)}.opt.dim{opacity:.6}
 .ans{background:#fff;border-left:4px solid var(--yellow);padding:10px 14px;margin:10px 0}.ans p{margin:0 0 7px}.tkn{margin-top:12px}
 /* clinic */
 .dowell{columns:3;padding-left:18px;margin:0}.dowell li{break-inside:avoid;margin-bottom:3px}
@@ -90,9 +90,13 @@ table.plain.tight td,table.plain.tight th{padding:3px 8px}table.plain tr.won td{
 #frozen .frozenbox{position:absolute;inset:0;background:rgba(10,20,30,.72);color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;z-index:3;text-align:center}.frozenbox p{margin:4px 0 10px}
 #modal[hidden]{display:none}.mback{position:fixed;inset:0;background:rgba(10,20,30,.5);z-index:20}.mbox{position:fixed;left:50%;top:50%;transform:translate(-50%,-50%);width:min(560px,94vw);max-height:90vh;overflow:auto;background:#fff;padding:18px 20px;z-index:21;border-radius:4px}.mbox.wide{width:min(1100px,96vw)}.mbox.dark{background:#23394f;color:#e6eef4}.mbox.dark .t th{color:#23394f}.mbox.dark .fine{color:#c9d7e2}.mbox h2{font-size:20px;margin:0 0 8px}.mbox h3{margin:12px 0 5px}.mx{position:absolute;right:8px;top:4px;background:none;border:0;font-size:22px;color:inherit}.real img{width:100%;display:block}.real{margin:0}.real figcaption{font-size:13px;color:var(--ink2);margin-top:5px}.calc{display:flex;gap:9px;align-items:flex-end;flex-wrap:wrap}.calc input{width:120px;border:1px solid #889;padding:3px 5px}.calc output{font-weight:600;font-size:17px}.msgs p{margin:0 0 9px;font-size:14px}
 #toasts{pointer-events:none;position:fixed;left:14px;bottom:14px;display:grid;gap:6px;z-index:30;max-width:min(420px,92vw)}.toast{background:var(--ink);color:#fff;padding:8px 12px;border-radius:3px;font-size:13.5px}
+/* self-check */
+.qz-chips{list-style:none;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin:0 0 18px;padding:0}.qz-chips li{background:#fff;border:1px solid var(--line);border-top:3px solid #93a7b6;padding:8px 10px;display:flex;flex-direction:column;gap:2px}.qz-chips li.on{border-top-color:var(--yellow)}.qz-chips small{font-size:12.5px;color:var(--ink2)}.qz-chips b{font:600 14px/1.2 var(--head)}.qz-chips span{font-size:14px;margin-top:auto;font-variant-numeric:tabular-nums}
+.qz-overall{background:var(--ink);color:#fff;padding:16px 18px;margin:0 0 8px;display:flex;flex-direction:column;gap:6px}.qz-overall small{font-size:13px;opacity:.85}.qz-overall b{font:600 22px/1.25 var(--head)}.qz-overall span{font-size:15px;font-variant-numeric:tabular-nums}
+.qz-row h2{font-size:18px;margin:20px 0 4px}.qz-row p{margin:0 0 6px}.qz-misses{margin:6px 0 0;padding-left:18px;font-size:14px}.qz-misses li{margin-bottom:6px}.lnk{background:none;border:0;padding:0;color:#0d5e63;text-decoration:underline;font:inherit;cursor:pointer}
 @media (max-width:1180px){.stage{grid-template-columns:minmax(0,1fr) 290px}#topbar{grid-template-columns:1fr 90px 1.8fr;}.tb-mkt{grid-column:1/3}.tb-user{grid-column:3}}
 @media (max-width:900px){.route{grid-template-columns:repeat(2,1fr)}.two,.cols{grid-template-columns:1fr;gap:18px}.stage{display:flex;flex-direction:column}.bench{grid-template-columns:1fr}.dowell{columns:2}.tl li{grid-template-columns:1fr;gap:2px}.app{grid-template-columns:1fr}.snav{flex-direction:row;overflow-x:auto}.snav button{white-space:nowrap}.g2,.g3,.abtop,.fr3,.fr4,.consg{grid-template-columns:1fr}.reg{grid-template-columns:1fr}.reg form+form{border-left:0;border-top:1px solid #555;order:-1}.book{grid-template-columns:1fr}.hide-m{display:none}}
-@media (max-width:560px){.route{grid-template-columns:1fr}.stop{min-height:0}.dowell{columns:1}.doc{padding:18px 14px 44px}.home{padding:20px 14px 44px}}
+@media (max-width:560px){.qz-chips li{padding:6px 7px}.qz-chips b{font-size:12.5px}.lnk{display:inline-block;min-height:40px;line-height:40px}.route{grid-template-columns:1fr}.stop{min-height:0}.dowell{columns:1}.doc{padding:18px 14px 44px}.home{padding:20px 14px 44px}}
 /* phone: header in two rows, rail docked at the bottom, top bar compact and sticky, wide tables as cards */
 .railtog,.ctltog,.tb-more,.m-note{display:none}.g2>*,.g3>*,.abtop>*{min-width:0}
 @media (max-width:900px){
@@ -830,6 +834,115 @@ function clinicHTML() {
   <h2>${V('How the score treats project cost', 'Điểm số tính chi phí dự án thế nào')}</h2><p>${V('The board spreads a project\'s cost over its life, while the game lasts three years. A team can look fine on the board after spending far more cash. Mention this only if asked.', 'Bảng xếp hạng chia chi phí dự án theo suốt đời dự án, trong khi mô phỏng chỉ ba năm. Đội chi nhiều tiền hơn hẳn vẫn có thể trông ổn trên bảng. Chỉ nói điều này khi được hỏi.')}</p></section>`;
 }
 
+/* Tutor self-check. One round for each job tutors asked for. Every answer restates the guided year, help desk or strategy page; nothing new is claimed here.
+   "Đợt" names a quiz round, so it is not mixed up with "Vòng", the rounds of the game. */
+const QUIZ_MAX_ROUNDS = 3, QUIZ_MAX_QUESTIONS = 5;
+const q_ = (q, opts, a, why, see) => ({ q: V(...q), opts: opts.map(o => V(...o)), a, why: V(...why), see });
+const QUIZ = [
+  { t: V('Guide the screens', 'Hướng dẫn các màn hình'), see: 'guide', qs: [
+    q_(['A team implements a project that cuts 94,880 tonnes a year and takes 0.75 years to build. How far does this year\'s shortfall fall?', 'Một đội thực hiện dự án giảm 94.880 tấn mỗi năm và mất 0,75 năm xây dựng. Lượng thiếu năm nay giảm bao nhiêu?'],
+      [['94,880 tonnes', '94.880 tấn'], ['23,720 tonnes', '23.720 tấn'], ['71,160 tonnes', '71.160 tấn']], 1,
+      ['Only operating time counts, so a quarter of the annual cut lands this year.', 'Chỉ tính thời gian vận hành, nên chỉ một phần tư lượng giảm hằng năm rơi vào năm nay.'], 'guide'),
+    q_(['A team bids 123 and the auction clears at 100. What do they pay per tonne?', 'Một đội đặt giá 123 và phiên đấu giá khớp ở 100. Đội trả bao nhiêu mỗi tấn?'],
+      [['$123, the price they bid at', '$123, đúng mức giá đội đã đặt'], ['$111.50, the midpoint', '$111,50, mức giữa hai giá'], ['$100, the clearing price', '$100, giá khớp']], 2,
+      ['Everyone who wins pays the clearing price, so a high bid does not mean paying a high price.', 'Mọi người trúng đều trả giá khớp, nên đặt giá cao không có nghĩa là phải trả giá cao.'], 'guide'),
+    q_(['A team buys 10,000 Year 2 allowances. What happens to its Year 1 forecast position?', 'Một đội mua 10.000 hạn ngạch Năm 2. Dự báo vị thế Năm 1 của đội thay đổi thế nào?'],
+      [['It does not move', 'Không thay đổi'], ['It improves by 10,000 tonnes', 'Tốt lên 10.000 tấn'], ['It improves by 1,000 tonnes', 'Tốt lên 1.000 tấn']], 0,
+      ['Bids for later years do not move this year\'s position. Point this out when the forecast stays still.', 'Mua cho các năm sau không làm đổi vị thế năm nay. Hãy chỉ ra điều này khi dự báo đứng yên.'], 'guide'),
+    q_(['How much of the obligation can offsets cover at year end?', 'Cuối năm, tín chỉ bù trừ được dùng cho bao nhiêu phần nghĩa vụ?'],
+      [['All of it, if the team holds enough', 'Toàn bộ, nếu đội có đủ'], ['Up to 10%, and they are used first', 'Tối đa 10%, và được dùng trước'], ['Up to 50%, and they are used last', 'Tối đa 50%, và được dùng sau cùng']], 1,
+      ['Offsets go first, up to 10% of the obligation, then allowances.', 'Tín chỉ bù trừ được dùng trước, tối đa 10% nghĩa vụ, rồi đến hạn ngạch.'], 'guide'),
+    q_(['On the exchange, a team enters a limit order at 150 and sees "Above price ceiling". What do you teach?', 'Trên sàn, một đội đặt lệnh giới hạn ở 150 và thấy "Above price ceiling". Bạn hướng dẫn gì?'],
+      [['Report a bug, because the ceiling is 300 and 150 is far below it', 'Báo lỗi, vì giá trần là 300 và 150 còn thấp hơn nhiều'], ['Change the vintage to Year 2', 'Đổi thời hạn sang Năm 2'], ['The exchange allows 10% around the last trade', 'Sàn chỉ cho phép lệch 10% so với giao dịch gần nhất']], 2,
+      ['The 100 to 300 collar applies to auctions. Re-enter nearer the market, or use a market order.', 'Biên 100 đến 300 áp dụng cho đấu giá. Hãy nhập lại gần giá thị trường, hoặc dùng đơn hàng theo thị trường.'], 'guide'),
+  ] },
+  { t: V('Tech support', 'Hỗ trợ kỹ thuật'), see: 'desk', qs: [
+    q_(['Several teams say at the same moment that the PIN gives an error. What do you do?', 'Nhiều đội cùng lúc báo mã PIN bị lỗi. Bạn làm gì?'],
+      [['Tell Josh, because registration may be closed', 'Báo Josh, vì có thể đăng ký đã đóng'], ['Give those teams your own login', 'Cho các đội đó dùng tài khoản của bạn'], ['Have them keep retrying every minute', 'Bảo họ cứ thử lại mỗi phút']], 0,
+      ['For one team, check the Register column and the PIN on the big screen. Several at once points to registration itself.', 'Với một đội, hãy kiểm tra cột Đăng ký và mã PIN trên màn hình lớn. Nhiều đội cùng lỗi thì vấn đề có thể nằm ở việc đăng ký.'], 'desk'),
+    q_(['A team says the screen is frozen. What do you check first?', 'Một đội báo màn hình bị đứng. Bạn kiểm tra gì trước tiên?'],
+      [['Close and reopen the browser', 'Đóng và mở lại trình duyệt'], ['Whether the red PAUSED bar is on', 'Có thanh TẠM DỪNG màu đỏ hay không'], ['Whether their password has expired', 'Mật khẩu của họ có hết hạn không']], 1,
+      ['First rule out a pause by Josh. Then ask whether it is one team or the whole room.', 'Trước hết loại trừ việc Josh tạm dừng. Sau đó xem chỉ một đội hay cả phòng.'], 'desk'),
+    q_(['"Nothing happened so I clicked again, and now I have three orders!"', '"Không thấy gì nên em bấm lại, giờ có ba đơn hàng!"'],
+      [['Ask Josh to reverse them', 'Nhờ Josh đảo ngược các đơn'], ['Refresh, and the extras will vanish', 'Tải lại trang, các đơn thừa sẽ biến mất'], ['Cancel the extras in My Current Orders', 'Hủy các đơn thừa ở Đơn hàng hiện có của tôi']], 2,
+      ['Anything already filled stays. Remind them to enter once and be patient.', 'Phần đã khớp thì vẫn giữ nguyên. Nhắc họ chỉ nhập một lần và kiên nhẫn chờ.'], 'desk'),
+    q_(['A team got kicked out, and its company is no longer in the list. What now?', 'Một đội bị thoát ra, và công ty của đội không còn trong danh sách. Làm gì tiếp?'],
+      [['Login with the same email and password', 'Đăng nhập bằng đúng email và mật khẩu cũ'], ['Register again with a new company', 'Đăng ký lại với công ty mới'], ['Ask Josh to restart the year', 'Nhờ Josh bắt đầu lại năm']], 0,
+      ['The company is already theirs, which is why it left the list. Registering again would separate them from their position.', 'Công ty đã thuộc về đội, nên mới không còn trong danh sách. Đăng ký lại sẽ tách đội khỏi vị thế của mình.'], 'desk'),
+    q_(['In Year 2 a team finds the Trade Activity table empty. Why?', 'Sang Năm 2, một đội thấy bảng Hoạt động giao dịch trống. Vì sao?'],
+      [['The market has closed', 'Thị trường đã đóng'], ['The dropdown still shows Year 1', 'Ô chọn vẫn đang để Năm 1'], ['Nobody has traded in Year 2 on this market yet', 'Chưa có ai giao dịch Năm 2 trên thị trường này']], 1,
+      ['The vintage filter does not follow the year. If the current year really is empty, tell Josh.', 'Bộ lọc thời hạn không tự đổi theo năm. Nếu năm hiện tại thật sự trống, hãy báo Josh.'], 'desk'),
+  ] },
+  { t: V('Coach strategy', 'Hướng dẫn chiến lược'), see: 'clinic', qs: [
+    q_(['In game Round 2, a team says: "Just tell us what to do next." What do you do?', 'Ở Vòng 2 của trò chơi, một đội nói: "Anh chị cứ bảo bọn em làm gì đi." Bạn làm gì?'],
+      [['Tell them the best move, because the clock is running out', 'Nói nước đi tốt nhất, vì đồng hồ sắp hết giờ'], ['Ask for their position and what each option costs', 'Hỏi vị thế của đội và chi phí của từng lựa chọn'], ['Say you cannot help, and walk away', 'Nói không giúp được rồi đi chỗ khác']], 1,
+      ['Decisions stay with the team, because the lesson is that their choices drive the result.', 'Quyết định thuộc về đội, vì bài học là chính lựa chọn của họ tạo ra kết quả.'], 'clinic'),
+    q_(['In game Round 1, a team has done nothing after two auctions and its history is empty. What do you do?', 'Ở Vòng 1 của trò chơi, sau hai phiên đấu giá một đội vẫn chưa làm gì và lịch sử trống. Bạn làm gì?'],
+      [['Leave them, as they are still thinking', 'Để yên, vì đội còn đang suy nghĩ'], ['Tell them to buy the whole gap at market before time runs out', 'Bảo đội mua toàn bộ phần thiếu theo thị trường trước khi hết giờ'], ['Visit first, and do one abatement and one bid together', 'Đến trước, cùng làm một giảm phát thải và một lượt đặt giá']], 2,
+      ['Abatement gets worse every year and late buyers meet fewer sellers, so help them start while you may still explain.', 'Giảm phát thải đắt dần mỗi năm và người mua muộn gặp ít người bán hơn, nên hãy giúp đội bắt đầu khi còn được giải thích.'], 'clinic'),
+    q_(['In game Round 1, a team is studying the MACC chart while the clock runs. What do you say?', 'Ở Vòng 1 của trò chơi, một đội ngồi xem biểu đồ MACC trong khi đồng hồ chạy. Bạn nói gì?'],
+      [['Skip the chart and pick an affordable low-cost row', 'Bỏ qua biểu đồ, chọn một dòng đủ tiền và chi phí thấp'], ['Understand the whole chart properly first, and only then click', 'Hãy hiểu kỹ toàn bộ biểu đồ trước, rồi mới bắt đầu bấm'], ['Ask Josh to pause the clock for you', 'Nhờ Josh tạm dừng đồng hồ cho đội']], 0,
+      ['They do not need to understand the chart to play. Take them straight to the table.', 'Đội không cần hiểu hết biểu đồ mới chơi được. Hãy đưa họ thẳng đến bảng.'], 'clinic'),
+    q_(['In game Round 3, a team is well long every year. Which question fits?', 'Ở Vòng 3 của trò chơi, năm nào một đội cũng thừa nhiều. Câu hỏi nào phù hợp?'],
+      [['Why not sell it all right now?', 'Sao không bán hết ngay đi?'], ['Have you thought about trying the exchange yet this year?', 'Năm nay đội đã nghĩ đến việc thử giao dịch trên sàn chưa?'], ['How much of that do you need next year?', 'Đội cần bao nhiêu trong số đó cho năm sau?']], 2,
+      ['Banking stops at one year of obligation and the surplus above that is forfeited. The question makes them see it without giving a move.', 'Lưu giữ chỉ đến mức một năm nghĩa vụ, phần vượt sẽ bị mất. Câu hỏi giúp đội tự thấy mà không gợi ý nước đi.'], 'clinic'),
+    q_(['In game Round 2, a team has many open orders and its position keeps drifting. Which question fits?', 'Ở Vòng 2 của trò chơi, một đội có nhiều đơn hàng đang mở và vị thế cứ trôi. Câu hỏi nào phù hợp?'],
+      [['Why not cancel all of them now?', 'Sao không hủy hết ngay đi?'], ['Which open orders would you be unhappy to see fill?', 'Đơn nào đang mở mà đội sẽ không vui nếu nó khớp?'], ['Why not buy more to be safe?', 'Sao không mua thêm cho chắc?']], 1,
+      ['Orders stay live and fill later, so the year can end long or short by accident.', 'Đơn hàng vẫn còn hiệu lực và có thể khớp sau, nên cuối năm có thể thừa hoặc thiếu ngoài ý muốn.'], 'clinic'),
+  ] },
+];
+const QZ_SEE = { guide: V('Guided year', 'Năm có hướng dẫn'), desk: V('Help desk', 'Hỗ trợ'), clinic: V('Strategy', 'Chiến lược') };
+const quizState = () => { const s = store.get('quiz', null); return s && s.picks?.length === QUIZ_MAX_ROUNDS ? s : { r: 0, picks: [[], [], []], open: false }; };
+const quizScore = (s, r) => s.picks[r].filter((p, i) => p === QUIZ[r].qs[i].a).length;
+const roundDone = (s, r) => s.picks[r].length >= QUIZ_MAX_QUESTIONS;
+// A round reads: 5 or 4 is ready, 3 needs a review, 2 or less needs practice with another tutor. These bands are our judgement, not Josh's.
+const quizBand = n => n >= 4 ? 'solo' : n === 3 ? 'review' : 'pair';
+const QZ_ROUND = {
+  solo: V('Ready for this job.', 'Sẵn sàng cho việc này.'),
+  review: V('Nearly. Read what you missed before the session.', 'Gần được. Hãy đọc lại các câu sai trước buổi tập huấn.'),
+  pair: V('Practise this first, and stay near another tutor for it on the day.', 'Hãy luyện phần này trước, và trong buổi tập huấn nên ở gần một trợ giảng khác.'),
+};
+// The weakest round decides, so a high total cannot hide a job the tutor cannot yet do.
+const QZ_OVERALL = {
+  solo: V('You can support a table on your own.', 'Bạn có thể tự hỗ trợ một bàn.'),
+  review: V('You can support a table after a quick review of what you missed.', 'Bạn có thể hỗ trợ một bàn sau khi đọc nhanh lại các câu sai.'),
+  pair: V('Pair with another tutor, and practise your weakest job first.', 'Hãy đi cùng một trợ giảng khác, và luyện trước phần còn yếu nhất.'),
+};
+function quizMisses(s, r) {
+  const miss = QUIZ[r].qs.map((x, i) => s.picks[r][i] === x.a || s.picks[r][i] == null ? '' : `<li class="qz-miss"><b>${x.q}</b><br>${x.opts[x.a]}</li>`).join('');
+  return miss ? `<ul class="qz-misses">${miss}</ul>` : '';
+}
+function quizChips(s) {
+  return `<ol class="qz-chips">${QUIZ.map((r, i) => `<li class="${i === s.r ? 'on' : ''}"><small>${V('Round', 'Đợt')} ${i + 1}</small><b>${r.t}</b><span>${s.picks[i].length ? `${quizScore(s, i)} / ${s.picks[i].length}` : '-'}</span></li>`).join('')}</ol>`;
+}
+function quizHTML() {
+  const s = quizState(), r = s.r, R = QUIZ[r], i = s.picks[r].length - (s.open ? 1 : 0);
+  const head = `<h1>${V('Self-check', 'Tự kiểm tra')}</h1><p class="lede">${V('Three rounds at most, with five questions in each: one round for each tutor job. Your score stays in this browser, and nobody else sees it.', 'Tối đa ba đợt, mỗi đợt năm câu, mỗi đợt ứng với một việc của trợ giảng. Điểm chỉ lưu trên trình duyệt này, không ai khác thấy.')}</p>${quizChips(s)}`;
+  if (!roundDone(s, r) || s.open) {
+    const x = R.qs[i], pick = s.open ? s.picks[r][i] : null;
+    const last = i === QUIZ_MAX_QUESTIONS - 1;
+    return `<section class="doc">${head}<p class="fine" id="qz-pos">${V('Round', 'Đợt')} ${r + 1} / ${QUIZ_MAX_ROUNDS}, ${V('question', 'câu')} ${i + 1} / ${QUIZ_MAX_QUESTIONS}</p><div class="ticket"><div class="bubble" id="qz-q">${x.q}</div>
+    <div class="opts">${x.opts.map((o, k) => `<button class="opt ${pick == null ? '' : k === x.a ? 'right' : k === pick ? 'wrong' : 'dim'}" data-act="qzpick" data-v="${k}" ${pick == null ? '' : 'disabled'}>${pick != null && k === x.a ? '✓ ' : pick === k ? '✗ ' : ''}${o}</button>`).join('')}</div>
+    ${pick == null ? '' : `<div class="ans" role="status"><p>${x.why}</p><p class="fine">${V('More on', 'Xem thêm ở')}: <button class="lnk" data-act="page" data-v="${x.see}">${QZ_SEE[x.see]}</button></p></div><div class="tkn"><button class="btn pri" id="qz-next" data-act="qznext">${last ? V('See round score', 'Xem điểm đợt này') : V('Next question', 'Câu tiếp theo')}</button></div>`}</div></section>`;
+  }
+  const n = quizScore(s, r), finished = QUIZ.every((_, k) => roundDone(s, k));
+  const rows = QUIZ.map((q, k) => roundDone(s, k) && k <= r ? `<div class="qz-row"><h2>${q.t}: <span id="qz-score-${k}">${quizScore(s, k)} / ${QUIZ_MAX_QUESTIONS}</span></h2><p>${QZ_ROUND[quizBand(quizScore(s, k))]} <button class="lnk" data-act="page" data-v="${q.see}">${QZ_SEE[q.see]}</button></p>${quizMisses(s, k)}</div>` : '').join('');
+  const scores = QUIZ.map((_, k) => quizScore(s, k)), total = scores.reduce((a, b) => a + b, 0), worst = Math.min(...scores);
+  return `<section class="doc">${head}
+  ${finished ? `<div class="qz-overall" id="qz-overall" data-level="${quizBand(worst)}"><small>${V('Your capacity to support the training', 'Khả năng hỗ trợ buổi tập huấn của bạn')}</small><b>${QZ_OVERALL[quizBand(worst)]}</b><span>${total} / ${QUIZ_MAX_ROUNDS * QUIZ_MAX_QUESTIONS}</span></div>` : `<p class="lede" id="qz-partial">${V('Finish all three rounds for an overall reading. You can stop here and come back.', 'Hoàn thành cả ba đợt để có đánh giá chung. Bạn có thể dừng ở đây và quay lại sau.')}</p>`}
+  ${rows}<p class="fine">${V('The bands are our own guide for self-review, not a test set by Josh.', 'Các mức này là gợi ý để tự đánh giá, không phải bài kiểm tra của Josh.')}</p>
+  <div class="tkn">${finished ? '' : `<button class="btn pri" id="qz-next-round" data-act="qzround">${V('Next round', 'Đợt tiếp theo')}: ${QUIZ[r + 1].t}</button> `}<button class="btn" id="qz-reset" data-act="qzreset">${V('Start over', 'Làm lại từ đầu')}</button></div></section>`;
+}
+function quizAct(a, v) {
+  const s = quizState();
+  if (a === 'qzpick' && !s.open && !roundDone(s, s.r)) { s.picks[s.r].push(+v); s.open = true; }
+  if (a === 'qznext') s.open = false;
+  if (a === 'qzround' && roundDone(s, s.r) && s.r < QUIZ_MAX_ROUNDS - 1) s.r++;
+  store.set('quiz', a === 'qzreset' ? null : s);
+  $('#main').innerHTML = quizHTML();
+  if (a !== 'qzpick') window.scrollTo(0, 0);
+}
+
 /* Vietnamese for screen text that has no V() pair: exact matches, then patterns for text with numbers.
    Terms follow Thuat ngu CarbonSim. Real error messages stay recognisable: the English original follows in brackets. */
 const VI = {
@@ -951,7 +1064,7 @@ const chipV = v => chip('Y' + v);
 /* ---------- pages ---------- */
 const isPhone = () => matchMedia('(max-width:900px)').matches;
 const centerOn = box => { const on = box && box.querySelector('.on'); if (on) box.scrollLeft = on.offsetLeft - box.offsetLeft - (box.clientWidth - on.offsetWidth) / 2; };
-const PAGES = [['guide', V('Guided year', 'Năm có hướng dẫn')], ['play', V('Free play', 'Chơi tự do')], ['desk', V('Help desk', 'Hỗ trợ')], ['clinic', V('Strategy', 'Chiến lược')], ['card', V('Room card', 'Thẻ tra cứu')], ['confirm', V('Ask Josh', 'Hỏi Josh')]];
+const PAGES = [['guide', V('Guided year', 'Năm có hướng dẫn')], ['play', V('Free play', 'Chơi tự do')], ['desk', V('Help desk', 'Hỗ trợ')], ['clinic', V('Strategy', 'Chiến lược')], ['quiz', V('Self-check', 'Tự kiểm tra')], ['card', V('Room card', 'Thẻ tra cứu')], ['confirm', V('Ask Josh', 'Hỏi Josh')]];
 function nav(page) {
   UI.page = page; try { history.replaceState(null, '', '#' + page); } catch { }
   $('#nav').innerHTML = PAGES.map(([k, n]) => `<button data-act="page" data-v="${k}" class="${k === page || (page === 'sim' && k === (UI.mode === 'guide' ? 'guide' : 'play')) ? 'on' : ''}">${n}</button>`).join('');
@@ -973,6 +1086,7 @@ function nav(page) {
   if (page === 'clinic') { m.innerHTML = clinicHTML(); renderAuctionLab(); renderCBS(); }
   if (page === 'card') { m.innerHTML = cardHTML(); renderCardSearch(); }
   if (page === 'confirm') m.innerHTML = confirmHTML();
+  if (page === 'quiz') m.innerHTML = quizHTML();
   window.scrollTo(0, 0);
 }
 function renderCardSearch() {
@@ -1355,6 +1469,7 @@ function act(a, v, el) {
     case 'runto': runTo(); break;
     case 'forgot': { const e = $('#log-err'); if (e) e.textContent = 'A verification code would go to your email. If that fails, ask the administrator.'; break; }
     case 'logout': UI.view = 'register'; UI.loggedOut = true; renderAll(); toast('Logged out. Use Login on the left to return.'); break;
+    case 'qzpick': case 'qznext': case 'qzround': case 'qzreset': quizAct(a, v); break;
     case 'tkcat': TK.cat = v; TK.i = 0; TK.pick = null; TK.order = []; nav('desk'); break;
     case 'tkpick': { TK.pick = +v; const t = deskList()[TK.i % deskList().length]; if (+v === t.a) { const s = store.get('solved', {}); s[t.id] = 1; store.set('solved', s); if (Object.keys(s).length >= TICKETS.length) store.set('done', { ...store.get('done', {}), desk: true }); } showTicket(); break; }
     case 'tknext': { const len = deskList().length; TK.i = (TK.i + (+v) + len) % len; TK.pick = null; TK.order = []; showTicket(); break; }
